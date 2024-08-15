@@ -33,7 +33,7 @@ City University of New York \\
 
 
 \section{Introduction}
-\begin{frame}\frametitle{What is inheritance?}
+\begin{frame}\frametitle{What is Inheritance?}
 \begin{block}{Problem Statement}
     Inheritance is a mechanism in C++ which allows for you to pass 
     properties (attributes and methods), from one class to another. 
@@ -60,7 +60,7 @@ of shape(base class). This means the right triangle class inherits properties fr
 \end{frame}
 
 
-\begin{frame}{Why use inheritance?}
+\begin{frame}{Why use Inheritance?}
     \begin{itemize} 
     \item Allows us to write more concise code by reusing code from a pre-existing class.
     \item Can help in the understanding and implementation of polymorphism.
@@ -68,7 +68,7 @@ of shape(base class). This means the right triangle class inherits properties fr
     \end{frame}
 
 
-\begin{frame}{What is polymorphism?}
+\begin{frame}{What is Polymorphism?}
     \begin{itemize} 
     \item Polymorphism describes the concept that you can 
     access objects of different types through the same interface.
@@ -77,7 +77,7 @@ of shape(base class). This means the right triangle class inherits properties fr
 \end{frame}
 
 
-\begin{frame}{Why use polymorphism?}
+\begin{frame}{Why use Polymorphism?}
     \begin{itemize} 
     \item For example, you have classes: BaseClass, DerivedClass1 and DerviedClass2, and they 
     all have a method doSomething(). The user presses a key "A", "S", or "D", and,
@@ -88,14 +88,6 @@ of shape(base class). This means the right triangle class inherits properties fr
 
 
 \section{Technical Information}
-    \begin{frame}{Technical things to keep in mind}
-    \begin{itemize}
-    \item if you implement a destructor, make sure base class is virtual.
-    \item virtual functions and polymorphism only works for pointers and references
-    \end{itemize}  
-\end{frame}
-
-
 \begin{frame}{Constructors and Inheritance}
     \begin{itemize}
         \item When you create an instance of the derived class, the constructor for the base class
@@ -106,7 +98,6 @@ of shape(base class). This means the right triangle class inherits properties fr
         If there is no default constructor you will get a compiler error.  
     \end{itemize}
 \end{frame}
-
 
 
 \begin{frame}{Important Keywords}
@@ -120,19 +111,27 @@ of shape(base class). This means the right triangle class inherits properties fr
 
 \begin{frame}{Types of Inheritance}
     \begin{itemize}
-        \item public inheritance will inherit all the public properties of the base class 
+        \item Public inheritance will inherit all the public properties of the base class 
         and make them public members of the derived class. Everyone has access to these members. 
         Syntax: \textbf{class derived: public base}
-        \item protected inheritance will inherit all the public properties of the base class 
+        \item Protected inheritance will inherit all the public properties of the base class 
         and make them protected members of the derived class. Protected means only the current class 
         and classes derived from the current class will have access to protected members.
         Syntax: \textbf{class derived: protected base}
-        \item private inheritance will inherit all the public properties of the base class 
+        \item Private inheritance will inherit all the public properties of the base class 
         and make them private members of the derived class. Only the current class will
         have access to these members. Syntax: \textbf{class derived: private base}   
         \item If you do not choose an inheritance type, C++ defaults to private inheritance 
         (just like members default to private access if you do not specify otherwise). 
     \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Technical things to keep in mind}
+    \begin{itemize}
+    \item If you implement a destructor, make sure base class is virtual.
+    \item Virtual functions and polymorphism only works for pointers and references.
+    \end{itemize}  
 \end{frame}
 
 

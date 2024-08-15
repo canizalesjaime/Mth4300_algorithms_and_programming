@@ -33,63 +33,114 @@ City University of New York \\
 
 
 \section{Introduction}
-\begin{frame}\frametitle{Introduction}
+\begin{frame}\frametitle{What is inheritance?}
 \begin{block}{Problem Statement}
-    What is inheritance ?
+    Inheritance is a mechanism in C++ which allows for you to pass 
+    properties (attributes and methods), from one class to another. 
+    The class whose properties and methods are inherited is known as the base class.
+     And the class that inherits the properties from the parent class is the derived class.
 \end{block}
 \end{frame}
 
 
-\begin{frame}{Why is this hard?}
+\begin{frame}\frametitle{Simple Example}
+    \begin{figure}
+        \includegraphics[width=10cm]{shapes.png}
+    \end{figure}
+    \end{frame}
+
+
+\begin{frame}{Simple Example Cont.}
 \begin{itemize}
-\item Why use inheritance ?
+\item Here we can see that both triangle and square are shapes. Therfore they can inherit properties
+from the shape class. In this image we say that triangle and square are the derived classes and shape is the base class.
+\item Right triangle is the derived class of triangle(base class), and triangle is the derived class
+of shape(base class). This means the right triangle class inherits properties from both shape and triangle.
 \end{itemize}
 \end{frame}
 
 
-\begin{frame}{How inheritance works with constructors}
-\begin{itemize} 
-\item Pass
-\end{itemize}
+\begin{frame}{Why use inheritance?}
+    \begin{itemize} 
+    \item Allows us to write more concise code by reusing code from a pre-existing class.
+    \item Can help in the understanding and implementation of polymorphism.
+    \end{itemize}
+    \end{frame}
+
+
+\begin{frame}{What is polymorphism?}
+    \begin{itemize} 
+    \item Polymorphism describes the concept that you can 
+    access objects of different types through the same interface.
+    \item This is computed at runtime in C++
+    \end{itemize}
 \end{frame}
 
 
-\begin{frame}\frametitle{Introduction(cont.)} 
-\begin{block}{Solution proposed in paper}
-    virtual functions and polymorphism(only works for pointers and references)
-\end{block}
-\end{frame}    
-
-
-\begin{frame}{Virtual Functions}
-\begin{itemize}
-\item Virtual keyword
-\item override
-\end{itemize}
+\begin{frame}{Why use polymorphism?}
+    \begin{itemize} 
+    \item For example, you have classes: BaseClass, DerivedClass1 and DerviedClass2, and they 
+    all have a method doSomething(). The user presses a key "A", "S", or "D", and,
+    depending on his input, an instance of the appropriate class is created, and
+    its doSomething() method is called.
+    \end{itemize}
 \end{frame}
 
 
 \section{Technical Information}
-\begin{frame}{Technical Information}
-\begin{itemize}
-\item why are virtual functions only for runtime
-\item Example: For example, you have classes: SuperClass, Subclass1 and Subclass2, and they 
-all have a method doACoolThing(). The user presses a button 0, 1 or 2, and,
-depending on his input, an instance of the appropriate class is created, and
-its doACoolThing() method is called.
-\item If you do not choose an inheritance type, C++ defaults to private inheritance (just like members default to private access if you do not specify otherwise).
-\end{itemize}  
+    \begin{frame}{Technical things to keep in mind}
+    \begin{itemize}
+    \item if you implement a destructor, make sure base class is virtual.
+    \item virtual functions and polymorphism only works for pointers and references
+    \end{itemize}  
+\end{frame}
+
+
+\begin{frame}{Constructors and Inheritance}
+    \begin{itemize}
+        \item When you create an instance of the derived class, the constructor for the base class
+        must be called to initialize the data associated with the base class.
+        \item You can set this up by adding the constructor you want to call for the base class in
+        the member intialization list for the derived class.
+        \item If you skip this step, the compiler will try to call the default constructor for the base class. 
+        If there is no default constructor you will get a compiler error.  
+    \end{itemize}
+\end{frame}
+
+
+
+\begin{frame}{Important Keywords}
+    \begin{itemize}
+    \item \textbf{virtual:} Allows for a function in the base class to be overwritten by
+    functions of the same name in the derived class. 
+    \item \textbf{override:} Ensure that a derived class overwrites a virtual function in the base class. 
+    \end{itemize}  
+    \end{frame}
+    
+
+\begin{frame}{Types of Inheritance}
+    \begin{itemize}
+        \item public inheritance will inherit all the public properties of the base class 
+        and make them public members of the derived class. Everyone has access to these members. 
+        Syntax: \textbf{class derived: public base}
+        \item protected inheritance will inherit all the public properties of the base class 
+        and make them protected members of the derived class. Protected means only the current class 
+        and classes derived from the current class will have access to protected members.
+        Syntax: \textbf{class derived: protected base}
+        \item private inheritance will inherit all the public properties of the base class 
+        and make them private members of the derived class. Only the current class will
+        have access to these members. Syntax: \textbf{class derived: private base}   
+        \item If you do not choose an inheritance type, C++ defaults to private inheritance 
+        (just like members default to private access if you do not specify otherwise). 
+    \end{itemize}
 \end{frame}
 
 
 \section{Conclusion}
-\begin{frame}\frametitle{Conclusion}
+\begin{frame}\frametitle{Software Architecture of Code Example}
 \begin{figure}
     \includegraphics[width=12cm]{code.png}
 \end{figure}
-\begin{itemize}
-\item Software Architecture of code. 
-\end{itemize}
 \end{frame}
 
 

@@ -17,9 +17,9 @@ void archer_test();
 
 int main()
 {
-    //knight_test();
+    knight_test();
     //warrior_test();
-    magic_test();
+    //magic_test();
     //archer_test();
     return 0;
 }
@@ -41,8 +41,18 @@ void knight_test()
 
     Player* p1=new Player("Max",1);
     p1->print_class();
-    
     std::cout<<std::endl;
+
+    //polymorphism 
+    Player* p2 = k1;
+    p2->print_class();
+    std::cout<<", ";
+    p2=p1;
+    p1->print_class();
+    std::cout<<std::endl;
+
+
+    delete k1,p1,p2;
 }
 
 
@@ -57,13 +67,15 @@ void warrior_test()
     std::cout<<", ";
     w1->print_level_warrior();
     std::cout<<std::endl;
+
+    delete w1;
 }
 
-//shows off protected 
+//shows off protected use of inheritance
 ///////////////////////////////////////////////////////////////////////////////
 void magic_test()
 {
-    Mage* m1=new Mage("Al", 2, 2, 3, "Intro to Sorcery", "will o wisp");
+    Mage* m1=new Mage("Al", 2, 2, 3, "Intro to Sorcery", "Will o Wisp");
     m1->print_class();
     std::cout<<", ";  
     //std::cout<<m1->name_; //not allowed
@@ -74,6 +86,8 @@ void magic_test()
     w1->print_class();
     std::cout<<", ";
     std::cout<<w1->get_wand()<<std::endl;
+
+    delete m1,w1;
 }
 
 
@@ -81,7 +95,10 @@ void magic_test()
 ///////////////////////////////////////////////////////////////////////////////
 void archer_test()
 {
+    Archer* a1= new Archer("Claude", 5, 100, "Land of Fire", "Iron Bow");
+    a1->print_class();
     std::cout<<", ";
-    
-    std::cout<<std::endl;
+    a1->sell_weapon();
+    a1->print_stats();
+    delete a1;
 }

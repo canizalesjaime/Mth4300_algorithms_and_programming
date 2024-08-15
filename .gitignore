@@ -38,6 +38,7 @@
 *.fdb_latexmk
 *.toc
 *.nav
+*.snm
 
 .vscode/
 inheritance

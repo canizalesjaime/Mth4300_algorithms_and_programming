@@ -14,6 +14,7 @@ public:
            magic_type_(magic){}
 
     void print_class()override{std::cout<<"Class: Wizard ";}
+    std::string get_wand(){return wand_type_;}
 
 private:
     std::string wand_type_;

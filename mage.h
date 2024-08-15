@@ -12,8 +12,9 @@ public:
          std::string book, std::string dark_magic): 
          MagicPlayer(name,level,heal_level,magic_level), 
          book_type_(book), dark_magic_type_(dark_magic){}
+
     void print_class()override{std::cout<<"Class: Mage ";}
-    void print_level_warrior(){print_level();}
+    void print_name(){std::cout<<name_<<" ";}
 
 private:
     std::string book_type_;

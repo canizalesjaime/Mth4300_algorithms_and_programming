@@ -6,6 +6,7 @@
 #include "warrior.h"
 #include "wizard.h"
 #include "archer.h"
+#include "mage.h"
 
 
 void knight_test();
@@ -62,9 +63,17 @@ void warrior_test()
 ///////////////////////////////////////////////////////////////////////////////
 void magic_test()
 {
-    std::cout<<", ";
-    
+    Mage* m1=new Mage("Al", 2, 2, 3, "Intro to Sorcery", "will o wisp");
+    m1->print_class();
+    std::cout<<", ";  
+    //std::cout<<m1->name_; //not allowed
+    m1->print_name(); //allowed if protected
     std::cout<<std::endl;
+
+    Wizard* w1=new Wizard("Edward", 2, 3, 2, "Wooden Wand", "Heal Partner");
+    w1->print_class();
+    std::cout<<", ";
+    std::cout<<w1->get_wand()<<std::endl;
 }
 
 

@@ -1,0 +1,14 @@
+{
+    "build" : {
+        "dockerfile": "../.devcontainer/Dockerfile"
+    },
+    "containerEnv": {
+        "DISPLAY": "host.docker.internal:0.0",
+        "LIBGL_ALWAYS_INDIRECT": "0"
+      },
+      
+      "runArgs":["--net=host"],
+
+    "workspaceMount": "source=/c/Users/Jaime/source/repos/baruch_code,target=/workspace,type=bind",
+    "workspaceFolder" : "/workspace"
+}

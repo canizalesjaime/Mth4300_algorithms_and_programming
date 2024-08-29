@@ -9,6 +9,6 @@
       
       "runArgs":["--net=host"],
 
-    "workspaceMount": "source=/c/Users/Jaime/source/repos/baruch_code,target=/workspace,type=bind",
+    "workspaceMount": "source=/c/Users/Jaime/source/repos/Mth4300_algorithms_and_programming,target=/workspace,type=bind",
     "workspaceFolder" : "/workspace"
 }

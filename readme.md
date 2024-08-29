@@ -1,5 +1,0 @@
-Topics:
-   * B-trees
-   * Avl trees
-   * Midpoint Assessment: chess for backtracking
-   * C++: cmake, exception handling, streams

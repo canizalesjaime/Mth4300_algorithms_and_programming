@@ -6,8 +6,8 @@ to translate code written by a human, to code(binary) that can be read and
 executed by your cpu.
 ```mermaid
 graph TD;
-    c++ code(main.cpp) --> compiler;
-    compiler --> executable(a.exe or a.out);
+    c++_code(main.cpp)-->compiler;
+    compiler-->executable(a.exe_or_a.out);
 ```
 A **low-level programming language** is a type of programming language that is closer to a computer's hardware and machine code than a high-level language.(examples: Assembly, and to some C) <br><br>
 A **middle-level programming language** is a computer language that balances the features of high-level and low-level languages.(example is C++) <br><br>

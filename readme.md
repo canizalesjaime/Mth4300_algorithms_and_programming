@@ -1,1 +1,1 @@
-Welcome to 4300 Programming and Algoritms!
+Welcome to 4300 Programming and Algorithms!

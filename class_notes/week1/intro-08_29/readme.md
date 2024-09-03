@@ -23,6 +23,7 @@ In order to do this we must install the following dependencies:
 * docker(for windows make sure to turn on wsl2) 
 * vscode extension: dev containers 
 * vscode extension: c/c++
+* git 
 
 
 ## First Program 

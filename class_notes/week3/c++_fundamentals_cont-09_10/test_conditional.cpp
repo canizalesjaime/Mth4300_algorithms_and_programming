@@ -1,36 +1,22 @@
 #include<iostream>
-#include<string>
-#include <cmath>
 
 using namespace std;
 
-string string_operator_plus();
-void test_conditional();
+void test_conditional(int num);
 
 int main()
-{
-
-    return 0;
-}
-
-
-string string_operator_plus()
-{
-    string one ="app";
-    string two = "le";
-    string three = one+two+"s";
-    cout<<three; 
-    return three;
-}
-
-
-void test_conditional()
 {
     int num;
     cout<<"enter a num: ";
     cin>>num;
     cout<<endl;
+    test_conditional(num);
+    return 0;
+}
 
+
+void test_conditional(int num)
+{
     if(num % 2 ==0 && num %3==0)
     {
         cout<<"number is divisible by 2 and 3";

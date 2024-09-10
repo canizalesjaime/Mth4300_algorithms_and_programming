@@ -2,15 +2,27 @@
 
 ## table of contents
 1. Check Python in Docker!
-2. Operators 
-3. Conditional Statements 
-4. Loops
-5. Arrays
-6. In class assignments, and resources for further practice 
+2. Compilation and Arguments
+3. Operators 
+4. Conditional Statements 
+5. Loops
+6. Arrays
+7. In class assignments, and resources for further practice 
 
 
 ## Check Python in Docker!
 You can open docker and run ```python3 main.py```(from this directory) and run your first python program in docker!
+
+
+## Compilation and Arguments
+So far we have seen compilation like this: ```g++ main.cpp``` and we know that this will create an a.out file. Sometimes we may have multiple files in a directory, say **main1.cpp** and **main2.cpp** and we don't want the compilation of **main1.cpp** to overwrite the compilation of **main2.cpp**. To solve this problem, we can simply just name the compilation of **main1.cpp** as  main1.out and **main1.cpp** as main2.out. To change the name of output executable file produced by g++ we use the `-o` flag. <br>
+**Example:**
+```
+g++ main1.cpp -o main1.out
+g++ main2.cpp -o main2.out
+```
+**Produces:**<br>
+<img src="./assets/terminal.png">
 
 
 ## Operators
@@ -329,4 +341,13 @@ int main() {
 * The size of the array can be determined using sizeof(array) / sizeof(array[0]).
 * Elements are accessed using zero-based indexing.
 
-## In class assignments, and resources for further practice
+## In class assignments
+1. Write a code that calculates max{a,b} and stores the result in the variable m. 
+2. Create a program that reads real numbers a, b, c, d, and e from the standard input and calculates the value
+3. Create a program that reads real numbers of type double from the user input until it reads a negative number or zero. The negative number (or zero) means that the input is over. You are allowed to assume that the input from the user will contain at least one positive element. The program should calculate the maximum of the numbers provided by the user.
+4. Write a code that checks whether the real number x belongs to the union of the open intervals 
+(5 - 15)U(95 - 202). If it does, the program should print yes. If it does not, the program should print no.
+5. Assume that the user is asked to provide an integer x through the standard input. The program will check whether x is bigger than 100. If it is, then the program will print:
+Congratulations! You know about big numbers!
+If x is not bigger than 100, then the program will print:
+Good enough. Try with a bigger number next time.

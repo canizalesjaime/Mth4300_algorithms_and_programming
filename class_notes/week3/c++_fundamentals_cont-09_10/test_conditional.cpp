@@ -11,6 +11,7 @@ int main()
     cin>>num;
     cout<<endl;
     test_conditional(num);
+    cout<<endl;
     return 0;
 }
 
@@ -22,12 +23,12 @@ void test_conditional(int num)
         cout<<"number is divisible by 2 and 3";
     }
 
-    else if (num % 2)
+    else if (num % 2==0)
     {
         cout<<"number is divisible by 2 only";
     }
 
-    else if (num % 3)
+    else if (num % 3==0)
     {
         cout<<"number is divisible by 3 only";
     }

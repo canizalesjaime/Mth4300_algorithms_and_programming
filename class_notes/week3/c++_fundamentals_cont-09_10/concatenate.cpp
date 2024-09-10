@@ -16,7 +16,8 @@ int main()
     string s2;
     cin>>s2;
     
-    string_operator_plus(s1,s2);
+    string s3 = string_operator_plus(s1,s2);
+    cout<<s3<<endl;
     return 0;
 }
 

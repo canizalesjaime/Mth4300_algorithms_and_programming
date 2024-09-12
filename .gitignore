@@ -41,4 +41,4 @@
 *.snm
 
 .vscode/
-hidden/
+*hidden/

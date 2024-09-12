@@ -1,10 +1,14 @@
 # Lecture Notes
 
 ## table of contents
+1. .gitignore adn developing in this repo without git conflicts
 1. While Loops
 2. Arrays
 3. In class assignments
 
+
+## .gitignore adn developing in this repo without git conflicts
+When using git, sometimes you may want to code your own stuff in this repo, but you will notice that if you add your own code, then try to ```git pull``` changes you get a git conflict error. In order to solve this problem we use the **.gitignore** file. The **.gitignore** file is a special file in git, that allows us to ignore files and directories(aka repos and folders) from causing changes to the git repo. Check out the .gitignore file [here](../../../.gitignore), in the .gitignore file, you can see that we added a line ***hidden/**, this line allows us to create a folder named **hidden** anywhere, and it will not conflict with anything in the git repo.
 
 
 ## While Loops

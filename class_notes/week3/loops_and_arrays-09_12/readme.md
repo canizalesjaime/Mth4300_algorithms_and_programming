@@ -105,64 +105,6 @@ int main() {
 }
 ```
 
-#### Array Size
-The size of an array is fixed when it is declared. However, you can use the sizeof operator to determine the number of elements in an array:
-
-#### Example:
-
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-    int numbers[5] = {1, 2, 3, 4, 5};
-    int size = sizeof(numbers) / sizeof(numbers[0]);
-    cout << "Array size: " << size; // Outputs 5
-    return 0;
-}
-```
-
-### Multidimensional Arrays
-C++ also supports multidimensional arrays, such as 2D arrays, which can be visualized as tables.
-
-**Syntax:**
-
-```cpp
-type arrayName[rows][columns];
-```
-
-#### Example:
-
-```cpp
-int matrix[3][3] = {
-    {1, 2, 3},
-    {4, 5, 6},
-    {7, 8, 9}
-};
-```
-You can access elements in a 2D array using two indices:
-
-#### Example:
-
-```cpp
-#include <iostream>
-using namespace std;
-
-int main() {
-    int matrix[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}
-    };
-    cout << matrix[0][0]; // Outputs 1
-    cout << matrix[1][2]; // Outputs 6
-    return 0;
-}
-```
-### Key Points
-* Arrays have a fixed size, which must be known at compile time.
-* The size of the array can be determined using sizeof(array) / sizeof(array[0]).
-* Elements are accessed using zero-based indexing.
 
 ## In class assignments
 1. Create a program that reads 10 real numbers from the standard input and calculates theie sum. After the user enters the 10 numbers the program should print all the numbers entered by the user, and also print the sum of the numbers. 

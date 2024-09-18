@@ -82,10 +82,12 @@ is even compute row raised to column(r^c) and store in that cell, otherwise
 store 0. For row 0 and col 0(arr[0][0]), you can just store 0(since indeterminate).
 Print the computed 2d array. 
 
-**Example:** let the input be 4 for row and 5 for column<br>
-output:$\begin{bmatrix}
- 0 & 0 & 0 & 0 & 0 \\\
- 1 & 0 & 1 & 0 & 1 \\\
- 1 & 0 & 2 & 0 & 4 \\\
+**Example:** let the input be 4 for row and 5 for column, then the output will be:<br>
+```math
+\begin{bmatrix}
+ 0 & 0 & 0 & 0 & 0 \\
+ 1 & 0 & 1 & 0 & 1 \\
+ 1 & 0 & 2 & 0 & 4 \\
  1 & 0 & 3 & 0 & 9 
-\end{bmatrix}$
+\end{bmatrix}
+```

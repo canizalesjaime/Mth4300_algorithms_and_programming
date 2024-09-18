@@ -3,10 +3,10 @@
 ## table of contents
 1. Solutions to in class assignments 
 2. Arrays Continued
-3. Recursion
-4. In class assignments
+3. In class assignments
 
 
+## Solutions to in class assignments 
 1. Create a program that reads 10 real numbers from the standard input and calculates their sum. After the user enters the 10 numbers the program should print all the numbers entered by the user, and also print the sum of the numbers. [Solution](./class_assignment_solutions/question1.cpp)
 2. Create a program that reads real numbers of type double from the user input until it reads a negative number or zero. The negative number (or zero) means that the input is over. You are allowed to assume that the input from the user will contain at least one positive element. The program should calculate the maximum of the numbers provided by the user.[Solution](./class_assignment_solutions/question2.cpp)
 
@@ -75,8 +75,17 @@ int main() {
 * Elements are accessed using zero-based indexing.
 
 
-## Recursion
-
-
-
 ## In class assignments
+1. Write a C++ program, that prompts the user for the number of rows and 
+columns in a 2-dimensional array. For each cell in the 2d array, if the column
+is even compute row raised to column(r^c) and store in that cell, otherwise 
+store 0. For row 0 and col 0(arr[0][0]), you can just store 0(since indeterminate).
+Print the computed 2d array. 
+
+**Example:** let the input be 4 for row and 5 for column<br>
+output:$\begin{bmatrix}
+ 0 & 0 & 0 & 0 & 0 \\\
+ 1 & 0 & 1 & 0 & 1 \\\
+ 1 & 0 & 2 & 0 & 4 \\\
+ 1 & 0 & 3 & 0 & 9 
+\end{bmatrix}$

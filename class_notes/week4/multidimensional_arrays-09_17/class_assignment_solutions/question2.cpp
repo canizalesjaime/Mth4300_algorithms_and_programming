@@ -2,44 +2,24 @@
 
 using namespace std;
 
-double pow(double num, int exp);
 
 int main()
 {
-    cout<<"Enter number: ";
     double num;
+    double max=0;
+
+    cout<<"Enter a real number greater than zero(enter a number less than or equal to zero to end program:)"<<endl;
     cin>>num;
-    cout<<endl;
+    while(num>0)
+    {
+        if(num>max)
+        {
+            max=num;
+        }
+        cout<<"Enter a real number greater than zero(enter a number less than or equal to zero to end program:)"<<endl;
+        cin>>num;
+    }
 
-    cout<<"Enter exponent: ";
-    int exp;
-    cin>>exp;
-    cout<<endl;
-
-    double result = pow(num,exp);
-    cout<<"Result: "<<result<<endl;
+    cout<<"Max number entered: "<<max<<endl;
     return 0;
-}
-
-double pow(double num, int exp)
-{
-    bool check_neg_exp = false;
-    if(exp < 0)
-    {
-        exp = exp*-1;
-        check_neg_exp=true;
-    }
-
-    double product=1;
-    for (int i = 0; i < exp; i++)
-    {
-        product=num*product;
-    }
-
-    if(check_neg_exp)
-    {
-        product=1/product;
-    }
-
-    return product;
 }

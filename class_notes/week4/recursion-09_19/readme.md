@@ -19,8 +19,8 @@ Print the computed 2d array.
 \begin{bmatrix}
  0 & 0 & 0 & 0 & 0 \\
  1 & 0 & 1 & 0 & 1 \\
- 1 & 0 & 2 & 0 & 4 \\
- 1 & 0 & 3 & 0 & 9 
+ 1 & 0 & 4 & 0 & 16 \\
+ 1 & 0 & 9 & 0 & 81 
 \end{bmatrix}
 ```
 [Solution](./class_assignment_solutions/question1.cpp)

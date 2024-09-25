@@ -124,12 +124,4 @@ Dynamic memory in C++ allows for flexible memory management, particularly useful
 
 
 ## In class assignments
-1. Implement a Dynamic 2D Array (Matrix) Using Pointers
-Write a C++ program to dynamically create a 2D array (matrix) of integers of size m x n using dynamic memory allocation. You should:
-   * Ask the user to input the number of rows (m) and columns (n).
-   * Dynamically allocate memory for the 2D array.
-   * Initialize the 2D array with some values (e.g., fill with consecutive numbers).
-   * Print the matrix to the console.
-   * Deallocate the memory properly after use to avoid memory leaks.
-   * Handle edge cases where the user might input invalid sizes (like 0 or negative values).
-  
+1. Something else

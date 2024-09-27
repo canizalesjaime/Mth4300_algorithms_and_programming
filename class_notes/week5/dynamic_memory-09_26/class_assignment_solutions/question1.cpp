@@ -8,10 +8,9 @@ int main()
 
     int* ptr = &num;
 
-    cout<<"address of num: "<<ptr<<", content of num: "<<*ptr<<endl;
+    *ptr=11;
 
-    num = 9;
-
-    cout<<"address of num: "<<ptr<<", content of num: "<<*ptr<<endl;
+    cout<<"address of num: "<<ptr<<", content of num(as per ptr): "<<*ptr<<endl;
+    cout<<"num variable: "<<num<<endl;
     return 0;
 }

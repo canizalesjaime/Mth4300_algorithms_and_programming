@@ -1,0 +1,49 @@
+\documentclass[a4paper]{article}
+
+\usepackage{fullpage} % Package to use full page
+\usepackage{parskip} % Package to tweak paragraph skipping
+\usepackage{tikz} % Package for drawing
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{MTH 4300: Algorithms, Computers, and Programming II}
+\author{HW \#2}
+\date{Due Date: October 3rd, 2024}
+
+\begin{document}
+\maketitle
+
+% \section{Note}
+\textbf{Inside of git repo check under folder hw\_solutions you can find a file named hw2\_template.cpp to help guide you}
+
+\section{Implement a Dynamic 2D Array (Matrix) Using Pointers}
+Write a C++ program to dynamically create a 2D array (matrix) of integers of size m x n using dynamic memory allocation. You should:
+\begin{itemize}
+    \item Ask the user to input the number of rows (m) and columns (n).
+    \item Dynamically allocate memory for the 2D array.
+    \item Initialize the 2D array with some values (e.g., fill with consecutive numbers).
+    \item Print the matrix to the console.
+    \item Deallocate the memory properly after use to avoid memory leaks.
+    \item Handle edge cases where the user might input invalid sizes (like 0 or negative values).
+\end{itemize}
+
+
+\section{Recursion}
+Write a recursive function to compute the sum of all elements in an array of integers, 
+the input parameters to the function should just be the array of any size, and the function should return 
+the sum as an int. Note, I will test your function with arrays of different sizes. \
+No user input is required for this question.
+
+
+\section{Arrays}
+You are given two arrays of integers, arr1 and arr2, each of size n.
+Write a C++ function that checks if arr2 is a rotation of arr1. For 
+example, if arr1 = \{1, 2, 3, 4, 5\} and arr2 = \{3, 4, 5, 1, 2\}, then arr2
+is a rotation of arr1. The input parameters to the function should be 
+the two int arrays of any size n and you should return a bool, true if it
+is a rotation and false otherwise. Note, I will test your function with arrays of different sizes.
+No user input is required for this question.
+
+
+
+\end{document}

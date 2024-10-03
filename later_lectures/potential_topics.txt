@@ -4,3 +4,4 @@
    * C++: cmake, exception handling, streams
    * Object oriented programming
    * pass by reference
+   * opencv with docker

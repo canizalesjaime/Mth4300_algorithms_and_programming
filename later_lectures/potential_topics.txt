@@ -2,6 +2,6 @@
    * Avl trees
    * Midpoint Assessment: chess for backtracking
    * C++: cmake, exception handling, streams
-   * Object oriented programming
-   * pass by reference
    * opencv with docker
+   * sorting 
+   * maps

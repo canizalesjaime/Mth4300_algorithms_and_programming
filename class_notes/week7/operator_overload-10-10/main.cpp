@@ -1,5 +1,7 @@
 #include <iostream>
 
+using namespace std;
+
 class Complex 
 {
 private:
@@ -25,21 +27,17 @@ public:
     // Method to display the complex number
     void display() const
     {
-        std::cout << real << " + " << imag << "i" << std::endl;
+        cout << real << " + " << imag << "i" << endl;
     }
 
     // Friend function for overloading << operator
-    friend std::ostream& operator<<(std::ostream& os, const Complex& c) 
+    friend ostream& operator<<(ostream& os, const Complex& c) 
     {
         os << c.real << " + " << c.imag << "i";
         return os;
     }
 
-    // std::ostream& operator<<(const Complex& c) 
-    // {
-    //     *this << c.real << " + " << c.imag << "i";
-    //     return *this;
-    // }
+    
 };
 
 int main() 

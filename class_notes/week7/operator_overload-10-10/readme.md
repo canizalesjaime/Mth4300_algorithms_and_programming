@@ -88,39 +88,6 @@ bool operator==(const Complex& other) {
 
 This function checks if the real and imag parts of two Complex objects are equal.
 
-### Friend Functions for Operator Overloading
-Sometimes it's useful to overload operators using friend functions, especially when you need to access private members of a class. Here's an example of overloading the << operator for ostream to print a Complex object:
-
-```cpp
-#include <iostream>
-
-class Complex {
-private:
-    double real;
-    double imag;
-
-public:
-    Complex(double r = 0.0, double i = 0.0) : real(r), imag(i) {}
-
-    // Friend function for overloading << operator
-    friend std::ostream& operator<<(std::ostream& os, const Complex& c) {
-        os << c.real << " + " << c.imag << "i";
-        return os;
-    }
-};
-
-int main() {
-    Complex c1(3.0, 2.0);
-    std::cout << "Complex number: " << c1 << std::endl; // Output: Complex number: 3 + 2i
-
-    return 0;
-}
-```
-In this example:
-
-We use a friend function to overload the ```<<``` operator.
-The friend function can access private data members of the Complex class directly.
-
 
 ### Summary
 * Operator overloading allows you to redefine how operators work with user-defined types.

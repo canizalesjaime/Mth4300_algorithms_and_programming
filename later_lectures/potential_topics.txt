@@ -5,3 +5,6 @@
    * opencv with docker
    * sorting 
    * maps
+   * heaps
+   * bfs and dfs
+   * big o notation

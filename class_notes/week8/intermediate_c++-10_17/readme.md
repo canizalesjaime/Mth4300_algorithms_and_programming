@@ -1,4 +1,4 @@
-# Stuff we talked about during lecture not in main notes
+# Lecture Notes
 
 ## table of contents
 1. Initialization Lists

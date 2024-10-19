@@ -8,26 +8,101 @@
 
 \title{MTH 4300: Algorithms, Computers, and Programming II}
 \author{HW \#3}
-\date{Due Date: October 3rd, 2024}
+\date{Due Date: October 31st, 2024}
 
 \begin{document}
 \maketitle
 
-% \section{Note}
-\textbf{Inside of git repo check under folder hw\_solutions you can find a file named hw2\_template.cpp to help guide you}
 
-\section{Read}
-Inside of repo ./week7/operator_overload-10-10 there is a file named supplementary.md. Create 
-a class named student, and another class for 
+\section*{Problem 1}
+You need to create a class called \texttt{Book} that represents a book in a library. The class should include the following requirements and make use of the C++ concepts listed below:
 
+\begin{itemize}
+    \item \textbf{Data Members}:
+    \begin{itemize}
+        \item Private data members:
+        \begin{itemize}
+            \item \texttt{title} of type \texttt{std::string}
+            \item \texttt{author} of type \texttt{std::string}
+            \item \texttt{yearPublished} of type \texttt{int}
+            \item \texttt{price} of type \texttt{double}
+        \end{itemize}
+    \end{itemize}
 
-\section{Overloading Operators}
-Class for 3 by 3 matrix, overload for matrix multiplication and addition and so forth
+    \item \textbf{Constructor}:
+    \begin{itemize}
+        \item The class should have a constructor that takes the following parameters:
+        \begin{itemize}
+            \item \texttt{bookTitle} (a \texttt{std::string} passed by reference) for the title of the book
+            \item \texttt{bookAuthor} (a \texttt{std::string} passed by reference) for the author of the book
+            \item \texttt{publishedYear} (an integer with a default value of \texttt{1900}) for the year the book was published
+            \item \texttt{bookPrice} (a double with a default value of \texttt{0.0}) for the price of the book
+        \end{itemize}
+        \item Use an \textbf{initialization list} to initialize all the data members.
+    \end{itemize}
 
+    \item \textbf{Methods}:
+    \begin{itemize}
+        \item Implement a method called \texttt{applyDiscount()} that takes a \texttt{double} discount percentage by \textbf{reference} and applies it to the price of the book.
+        \item Implement a method called \texttt{getBookInfo()} that returns the book's details (title, author, year published, and price) as a formatted string. This method should be marked as \textbf{const} since it does not modify the object's state.
+    \end{itemize}
+\end{itemize}
 
-\section{implementation and interface}
+\subsection*{Example Usage}
 
+\begin{verbatim}
+Book myBook("The Great Gatsby", "F. Scott Fitzgerald", 1925, 15.99);
 
+double discount = 10.0; // 10% discount
+myBook.applyDiscount(discount);
+
+std::cout << myBook.getBookInfo() << std::endl;
+// Should print something like: "Title: The Great Gatsby, Author: F. Scott Fitzgerald, Year Published: 1925, Price: 14.39"
+\end{verbatim}
+
+\subsection*{Implementation Steps}
+
+\begin{itemize}
+    \item Define the \texttt{Book} class with the required private data members.
+    \item Implement the constructor using an \textbf{initialization list} with default arguments.
+    \item Implement the \texttt{applyDiscount()} method using \textbf{pass-by-reference} for the discount parameter.
+    \item Implement the \texttt{getBookInfo()} method, ensuring it is marked as a \textbf{const} member function.
+\end{itemize}
+
+\subsection*{Your Task}
+Write the full implementation of the \texttt{Book} class according to the above specifications.
+\newpage
+
+\section*{Problem 2}
+Create a class for a 3 by 3 matrix(using arrays and not vectors) named \texttt{Matrix33}:
+\begin{itemize}
+    \item A constructor that accepts a 2d array as an input parameter 
+    \item Overload * operator for matrix multiplication
+    \item Overload * operator for scalar multiplication
+    \item Overload + operator for matrix addition
+    \item Overload $<<$ operator to print matrix
+    \item Overload $>>$ operator, and prompt user to enter 9 consecutive values
+    \item Write a function to compute the determinant of the matrix 
+\end{itemize}
+\newpage
+
+\section*{Problem 3}
+\begin{itemize}
+    \item Separate the interface and implementation for problem 2.
+    \item Modify the 3d\_point.cpp file we went over in class
+    (you can find it in week9$\backslash$more\_object\_oriented\_stuff-10\_22 repo), 
+    by separating the interface and implemetation, then rename the class \texttt{Vector3}.
+    \item Create a separate main.cpp file where you include the headers for \texttt{Matrix33} and \texttt{Vector3}
+    \item Write a function in main.cpp that takes a  \texttt{Matrix33}=A and \texttt{Vector3}=x as input parameters
+          and computes Ax=b, and returns a type of \texttt{Vector3}(b). 
+    \item prompt the user to enter a matrix(3 by 3) and vector(3), then call your function to compute the product, then print the result.
+\end{itemize}
+\newpage
+ 
+
+\section*{Problem 4}
+Do problem 2, but for an n by m matrix using the vector template class. 
+In the constructor add the parameters for the number of rows (n) and number of columns(m).
 
 
 \end{document}

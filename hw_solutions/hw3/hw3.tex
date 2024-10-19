@@ -51,13 +51,12 @@ You need to create a class called \texttt{Book} that represents a book in a libr
 \subsection*{Example Usage}
 
 \begin{verbatim}
-Book myBook("The Great Gatsby", "F. Scott Fitzgerald", 1925, 15.99);
-
-double discount = 10.0; // 10% discount
-myBook.applyDiscount(discount);
-
-std::cout << myBook.getBookInfo() << std::endl;
-// Should print something like: "Title: The Great Gatsby, Author: F. Scott Fitzgerald, Year Published: 1925, Price: 14.39"
+    string bookName="The Great Gatsby";
+    string author="F. Scott Fitzgerald";
+    Book myBook(bookName, author, 1925, 15.99);
+    double discount = 10.0; // 10% discount
+    myBook.applyDiscount(discount);
+    myBook.getBookInfo();
 \end{verbatim}
 
 \subsection*{Implementation Steps}

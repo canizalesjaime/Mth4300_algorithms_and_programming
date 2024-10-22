@@ -9,7 +9,7 @@
 
 
 ## Solutions to in class assignments
-1. Create a class for a 3D points. Overload ```+``` and ```-``` to add corresponding indices, overload ```*``` and ```\``` for scalar multiplication\division. Overload extraction and insertion operators to print and input points, and overload ```==``` to check if two points are equal. Finally write a function that returns the magnitude of the point and prints it. [solution](./3d_point.cpp)
+1. Create a class for a 3D points. Overload ```+``` and ```-``` to add corresponding indices, overload ```*``` and ```\``` for scalar multiplication\division. Overload extraction and insertion operators to print and input points, and overload ```==``` to check if two points are equal. Finally write a function that returns the magnitude of the point and prints it. [solution](./class_assignment_solutions/3d_point.cpp)
 
 
 ## Wrapping up overloaded operators
@@ -76,6 +76,7 @@ public:
     Rectangle(double width, double height);  // Constructor
     double getArea() const;                  // Member function to get area
     double getPerimeter() const;             // Member function to get perimeter
+    friend std::ostream& operator<<(std::ostream& os, const Rectangle& r);
 
 private:
     double width;                            // Member variables
@@ -108,6 +109,21 @@ double Rectangle::getArea() const {
 double Rectangle::getPerimeter() const {
     return 2 * (width + height);
 }
+
+
+std::ostream& operator<<(std::ostream& os, const Rectangle& r){
+    for(int i=0; i<width;i++) std::cout<<"#";
+    std::cout<<std::endl;
+    for(int j=0; j<height-2;j++)
+    {
+        std::cout<<"#";
+        for(int i=0;i<width-2;i++) std::cout<<" ";
+        std::cout<<"#";
+        std::cout<<std::endl;
+    }
+    for(int i=0; i<width;i++) cout<<"#";   
+}
+
 ```
 
 Explanation:<br>

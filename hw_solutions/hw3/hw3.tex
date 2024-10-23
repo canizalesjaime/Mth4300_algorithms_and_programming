@@ -75,7 +75,11 @@ Write the full implementation of the \texttt{Book} class according to the above 
 \section*{Problem 2}
 Create a class for a 3 by 3 matrix(using arrays and not vectors) named \texttt{Matrix33}:
 \begin{itemize}
-    \item A constructor that accepts a 2d array as an input parameter 
+    \item Make sure the private attribute is a 2d array \texttt{double matrix[3][3];}
+    \item A constructor that accepts a 2d array as an input parameter
+    \item Add a default constructor that takes no arguments and does nothing in the body: \begin{verbatim}
+        matrix33(){}
+    \end{verbatim} 
     \item Overload * operator for matrix multiplication
     \item Overload * operator for scalar multiplication
     \item Overload + operator for matrix addition
@@ -92,6 +96,13 @@ Create a class for a 3 by 3 matrix(using arrays and not vectors) named \texttt{M
     (you can find it in week9$\backslash$more\_object\_oriented\_stuff-10\_22 repo), 
     by separating the interface and implemetation, then rename the class \texttt{Vector3}.
     \item Create a separate main.cpp file where you include the headers for \texttt{Matrix33} and \texttt{Vector3}
+    \item Overload the operator (), for accessing the private attributes of the \texttt{Vector3} and \texttt{Matrix33} classes.
+    \begin{verbatim}
+        double operator()(int row, int col)
+        {
+            return matrix[row][col];
+        }
+    \end{verbatim} 
     \item Write a function in main.cpp that takes a  \texttt{Matrix33}=A and \texttt{Vector3}=x as input parameters
           and computes Ax=b, and returns a type of \texttt{Vector3}(b). 
     \item prompt the user to enter a matrix(3 by 3) and vector(3), then call your function to compute the product, then print the result.

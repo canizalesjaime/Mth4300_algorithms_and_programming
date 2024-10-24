@@ -1,0 +1,95 @@
+\documentclass[a4paper]{article}
+
+\usepackage{fullpage} % Package to use full page
+\usepackage{parskip} % Package to tweak paragraph skipping
+\usepackage{tikz} % Package for drawing
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{MTH 4300: Algorithms, Computers, and Programming II}
+\author{Fall 2024}
+\date{Midterm}
+
+\begin{document}
+\maketitle
+
+
+\section{TRUE OR FALSE}
+\begin{enumerate}
+    \item A stack overflow is when you run out of memory on the heap
+    \item An attribute refers to a variable defined inside a class
+    \item Is this correct syntax: string a = 'apple';
+    \item = and == are the same thing in c++
+    \item Will this for loop ever halt: for(int i =0; i < 10; i=i+3)
+    \item You can change the size of an array more than once.
+    \item A pointer is allowed to store another pointer
+    \item A compiler is used to move files from one directory to another
+    \item The command cp list all the files in the current working directory
+    \item Is this syntax correct:
+    \begin{verbatim}
+      int a =5;
+      int* p = a;  
+    \end{verbatim}    
+\end{enumerate}
+
+\textbf{Solutions:}
+\begin{enumerate}
+      \item F
+      \item T
+      \item F
+      \item F
+      \item T
+      \item F
+      \item T
+      \item F
+      \item F
+      \item F
+\end{enumerate}
+\newpage
+
+
+\section{SHORT ANSWER}
+\begin{enumerate}
+    \item Fix the function below:
+    \begin{verbatim}
+      int my function(int param1, int param2)
+      {
+      cout<<parm2<<endl;
+      double param3 = param1/param2;
+      return param3;  
+    \end{verbatim}
+    
+    }
+    \item Whats a memory leak and how is it caused.
+    \item Your cpu can only read what type of files? (the answer is not an extension like .out)
+    \item Name one reason why docker is useful
+    \item What is 49\%5 equal to?
+    \item What is the main difference between a struct and a class?
+    \item What is the negation operator for boolean statements?
+    \item Write the code to create a 2d array on the heap.
+    \item What does new do?
+    \item In recursion, if you do not define , then the recursive function will never stop.
+    
+\end{enumerate} 
+\newpage
+
+
+\section{CODING} 
+\begin{enumerate}
+    \item Write a c++ class to describe a dragon. Make sure to include at least 3 attributes(set to private),
+    3 methods(set to public), and a constructor(set to public). Write a main function and create 2
+    objects in the main. Figure out a way to print one of your attributes in the main by calling one of
+    your methods.
+    \item Ask the user to input the size of an array, then create a 1d array on the heap, such that for each
+    index you store the (index + 1). So at index 0 it should store 1, index 1 should store 2 and so
+    forth. Write a recursive function that computes the sum of only the odd indices. The function
+    should work for arrays of any size.
+\end{enumerate} 
+
+\textbf{Solutions:}
+\begin{enumerate}
+  \item \href{run:./test_coding_question1.cpp}{coding\_question1.cpp}
+  \item \href{run:./test_coding_question2.cpp}{coding\_question2.cpp} 
+\end{enumerate}
+
+\end{document}

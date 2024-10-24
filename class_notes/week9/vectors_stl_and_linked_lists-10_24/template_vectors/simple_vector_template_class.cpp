@@ -1,5 +1,7 @@
 #include <iostream>
 
+//using namespace std;
+
 template <typename T>
 class MyVector {
 private:
@@ -51,3 +53,31 @@ private:
         data = newData;  // Point to new array
     }
 };
+
+
+template <typename Elem>
+void swap(Elem& first, Elem& second)
+{
+    Elem temp=first;
+    first=second;
+    second=temp;
+}
+
+int main()
+{
+    MyVector<double> vec;
+    vec.push_back(3.14);
+    vec.push_back(2.718);
+    for(int i=0;i<vec.getSize();i++)std::cout<<vec[i]<<" ";
+    std::cout<<std::endl;
+
+
+    int a,b;
+    a=7;
+    b=8;
+
+    swap(a,b);
+    std::cout<<a<<std::endl;
+
+    return 0;
+}

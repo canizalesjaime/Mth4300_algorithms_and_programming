@@ -6,7 +6,7 @@
 3. Class Assignments
 
 ## Links 
-1. (https://cplusplus.com/reference/vector/vector/)[https://cplusplus.com/reference/vector/vector/]
+1. [https://cplusplus.com/reference/vector/vector/](https://cplusplus.com/reference/vector/vector/)
 
 
 ## Vector Template Class

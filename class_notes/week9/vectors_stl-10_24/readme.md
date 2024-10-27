@@ -130,5 +130,5 @@ The ```vector``` template class in C++ is a powerful and flexible way to handle 
 
 ## Class Assignments
 1. In the code for the simplified vector class, add a method and name it pop_back(). pop_back() should delete the last element in your vector. 
-2. Add another method call pop_front(), pop_front() should delete the first element of the vector. Hint: you should add a private attribute to keep track of the front. 
+2. Add another method call pop_front(), pop_front() should delete the first element of the vector.
 3. for the Point3D class from last lecture, create a vector from the stl, and add four random points to the vector. Do this in the main function.

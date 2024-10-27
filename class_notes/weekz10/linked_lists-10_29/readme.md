@@ -1,8 +1,15 @@
 # Lecture notes
 
 ## table of contents
-1. Linked Lists
-2. Class Assignments
+1. Solution to in class assignments
+2. Linked Lists
+3. Class Assignments
+
+
+## Solutions to in class assignments
+1. In the code for the simplified vector class, add a method and name it pop_back(). pop_back() should delete the last element in your vector. [solution](./class_assignment_solutions/simple_vector_template_class.cpp)
+2. Add another method call pop_front(), pop_front() should delete the first element of the vector. [solution](./class_assignment_solutions/simple_vector_template_class.cpp)
+3. for the Point3D class from last lecture, create a vector from the stl, and add four random points to the vector. Do this in the main function. [solution](./class_assignment_solutions/3d_point.cpp)
 
 
 ## Linked Lists

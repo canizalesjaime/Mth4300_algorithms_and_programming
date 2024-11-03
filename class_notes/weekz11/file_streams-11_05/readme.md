@@ -3,8 +3,9 @@
 ## table of contents
 1. Solution to in class assignments
 2. File Streams
-3. Big O Notation
-4. Class Assignments
+3. STL List and Iterators
+4. Big O Notation
+5. Class Assignments
 
 
 ## Solutions to in class assignments
@@ -196,6 +197,29 @@ Remember to close the file after operations to release resources.
 Use appropriate file open modes depending on whether you want to overwrite, append, or open in binary mode.
 
 
+## STL List and Iterators
+In C++, the Standard Template Library (STL) ```std::list``` is a doubly linked list. It allows fast insertion and deletion at any position (constant time for these operations), but it does not support random access like ```std::vector```. Instead, elements must be accessed sequentially.
+
+### Key Features:
+* Dynamic size (automatically resizes).
+* Bi-directional traversal using iterators.
+* Efficient insertion/removal from both ends and in the middle (compared to vectors).
+
+
+### Iterators:
+```std::list``` provides bi-directional iterators, which can move forward (++) and backward (--).
+Iterators are similar to pointers and can be used to traverse, insert, or delete elements.
+
+### Basic usage:
+```cpp
+std::list<int> lst = {1, 2, 3, 4};
+std::list<int>::iterator it = lst.begin();  // Points to the first element
+++it;  // Move to the next element
+lst.insert(it, 10);  // Insert 10 before the current position
+```
+Iterators become invalid after modifying the list structure at their position.
+
+
 ## Big 0 Notation
 Big O Notation is a mathematical notation used in computer science to describe the time complexity (how fast:the number of steps the algorithm takes to complete) or space complexity (how much memory:the number of additional memory cells the algorithm needs to complete) an algorithm uses as the input size grows. It focuses on the worst-case scenario, helping to estimate how the performance of an algorithm scales with larger inputs.
 
@@ -227,4 +251,6 @@ Big O notation abstracts away constants and lower-order terms to focus on growth
 It helps compare algorithms and predict how they will scale as inputs increase.
 
 ## Class Assignments
-1. 
+1. Use stl list and solve the problem from last time for reversing a linked list
+2. What is the time complexity (big O notation) for reversed linked list?
+3. Read the [link list](./link_list.txt) from the file and store it in a stl list. Insert three nodes with the values 1,2 and 3 into the stl list. Sort the list by referencing [stl list documentation](https://cplusplus.com/reference/list/list/), then write the sorted list with the inserted values into a new file and name it ```modified_link_list.txt```. Reference the documentation and note the runtime and spacetime complexity for insert and sort.  

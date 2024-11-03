@@ -3,9 +3,10 @@
 ## table of contents
 1. Solutions to in class assignments
 2. Wrapping up overloaded operators
-3. separation of interface and implementation
-4. this keyword 
-5. The rest of object oriented which we will cover later
+3. Separation of Interface and Implementation
+4. Compilation of multifile with g++
+5. this keyword 
+6. The rest of object oriented which we will cover later
 
 
 ## Solutions to in class assignments
@@ -169,6 +170,30 @@ The C++ Standard Library uses this separation extensively. For example, when you
 * Minimal Dependencies: Keep header files minimal by including only the necessary dependencies.
 * Loose Coupling: Aim to keep the implementation and interface loosely coupled to facilitate easier updates and maintenance.
 * Separating interface and implementation in C++ is a fundamental design practice that leads to more modular, maintainable, and efficient code. It supports better software architecture principles by clearly defining what each component does without exposing the details of how it does it.
+
+
+## Compilation of multifile with g++
+To compile a multi-file C++ program using g++, follow these steps:
+
+Compile each source file (.cpp) separately into object files (.o):
+
+```bash
+g++ -c file1.cpp  # Generates file1.o
+g++ -c file2.cpp  # Generates file2.o
+```
+
+Link the object files together into a single executable:
+```bash
+g++ file1.o file2.o -o output_executable
+```
+
+Alternatively, you can compile and link in one step:
+```bash
+g++ file1.cpp file2.cpp -o output_executable
+```
+
+* Header files (.h) are included with #include in .cpp files and do not need to be compiled separately.
+* Object files can be reused, which speeds up recompilation.
 
 
 ## this keyword

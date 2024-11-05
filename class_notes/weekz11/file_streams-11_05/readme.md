@@ -9,9 +9,9 @@
 
 
 ## Solutions to in class assignments
-1. Modify insertion and deletion to delete by position instead of value. [solution](./class_assignment_solutions/) 
-2. Write a function that takes in a class ```LinkedList(singly linked list)```, and returns another linked list in the reverse order. Example: l1= 5->3->7->1 then the output should be l1_r= 1->7->3->5 [solution](./class_assignment_solutions/)
-3. Separate the interface from implementation for the ```LinkedList``` class given. [solution](./class_assignment_solutions/)
+1. Modify insertion and deletion to delete by position instead of value. [solution](./class_assignment_solutions/linked_list.cpp) 
+2. Write a function that takes in a class ```LinkedList(singly linked list)```, and returns another linked list in the reverse order. Example: l1= 5->3->7->1 then the output should be l1_r= 1->7->3->5 [solution](./class_assignment_solutions/linked_list.cpp)
+3. Separate the interface from implementation for the ```LinkedList``` class given. [solution](./class_assignment_solutions/linked_list.h)
 4. Check out the stl for lists [List Documentation](https://cplusplus.com/reference/list/list/)
 
 

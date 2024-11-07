@@ -1,0 +1,59 @@
+\documentclass[a4paper]{article}
+
+\usepackage{fullpage} % Package to use full page
+\usepackage{parskip} % Package to tweak paragraph skipping
+\usepackage{tikz} % Package for drawing
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{MTH 4300: Algorithms, Computers, and Programming II}
+\author{HW \#4}
+\date{Due Date: November 16th, 2024}
+
+\begin{document}
+\maketitle
+
+
+\section*{Problem 1}
+You are given two sorted linked lists list1 and list2.
+Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+Return  the merged linked list. What is the runtime and spacetime complexity of your algorithm.\textbf{Do not use STL List}
+\begin{verbatim}
+        LinkedList merge(LinkedList list1, LinkedList list2){...}
+\end{verbatim} 
+
+
+\section*{Problem 2}
+Write a function to remove the nth node from the end of the list.  
+Return true if deletion was successful, otherwise return false.
+What is the runtime and spacetime complexity of your algorithm.\textbf{Do not use STL List}
+\begin{verbatim}
+        bool deleteNthNodeFromEnd(int n){...}
+\end{verbatim}
+
+
+\section*{Problem 3}
+Given the node:\textbf{Do not use STL List for this question}
+\begin{verbatim}
+        struct node
+        {
+                string first_name;
+                string last_name;
+                node* next;
+        }
+\end{verbatim}
+\begin{enumerate}
+        \item Modify the link list class to sort by first name, then by last name. 
+        You must implement the sort function yourself, using the selection sort strategy.
+        What is the runtime and spacetime complexity of your algorithm.
+        \item In the main function, open the file \textbf{names\_list.txt} in c++ and write your name to the file. (use fstream )
+        \item Read from the names\_list.txt(including your name), and create a linked list object. Each line in the file should
+              correspond to one node, containing a first name and last name. Use the sort algorithm you wrote in part 1, to sort this linked list.
+              Create a new file \textbf{sorted\_names.txt}, and write the sorted list to this file, one name per line. 
+\end{enumerate}
+
+
+
+\section*{Problem 4}
+Do problem 1, 2 and 3 with STL list instead(use iterators as well).
+\end{document}

@@ -4,8 +4,7 @@
 1. Solution to in class assignments
 2. File Streams
 3. STL List and Iterators
-4. Big O Notation
-5. Class Assignments
+4. Class Assignments
 
 
 ## Solutions to in class assignments
@@ -219,36 +218,6 @@ lst.insert(it, 10);  // Insert 10 before the current position
 ```
 Iterators become invalid after modifying the list structure at their position.
 
-
-## Big 0 Notation
-Big O Notation is a mathematical notation used in computer science to describe the time complexity (how fast:the number of steps the algorithm takes to complete) or space complexity (how much memory:the number of additional memory cells the algorithm needs to complete) an algorithm uses as the input size grows. It focuses on the worst-case scenario, helping to estimate how the performance of an algorithm scales with larger inputs.
-
-### Key Points:
-* O(1) – Constant Time: The algorithm takes the same amount of time, regardless of input size.
-Example: Accessing an element in an array by index.
-
-* O(log n) – Logarithmic Time: The algorithm's time grows logarithmically as the input size increases.
-Example: Binary search.
-
-* O(n) – Linear Time: The time grows proportionally with the size of the input.
-Example: Iterating through a list.
-
-* O(n log n) – Linearithmic Time: The algorithm performs slightly worse than linear time, typically found in efficient sorting algorithms.
-Example: Merge sort, quicksort (average case).
-
-* O(n²) – Quadratic Time: The time grows proportional to the square of the input size.
-Example: Nested loops, like in bubble sort or insertion sort.
-
-* O(2ⁿ) – Exponential Time: The algorithm's time doubles with each additional input.
-Example: Recursive algorithms like the naive solution for the Fibonacci sequence.
-
-* O(n!) – Factorial Time: The time grows factorially, typically found in problems involving permutations.
-Example: Solving the traveling salesman problem using brute force.
-
-
-### Summary:
-Big O notation abstracts away constants and lower-order terms to focus on growth trends.
-It helps compare algorithms and predict how they will scale as inputs increase.
 
 ## Class Assignments
 1. Use stl list and solve the problem from last time for reversing a linked list

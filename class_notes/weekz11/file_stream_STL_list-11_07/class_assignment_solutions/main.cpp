@@ -58,6 +58,13 @@ int main()
     list.deleteByPosition(5);
     std::cout << "After deleting position 0: ";
     list.display();  // Output: 20 -> 70 -> 40 -> 17 -> 10 -> nullptr
+    list.reverse();
+    std::cout << "Reverse List: ";
+    list.display();
 
+    // LinkedList list2(list);  
+    // std::cout << "Forward List: ";
+    // list2.display();
+   
     return 0;
 }

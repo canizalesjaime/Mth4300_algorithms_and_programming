@@ -13,6 +13,8 @@ private:
 public:
     // Constructor
     LinkedList();
+    // Copy Constructor
+    LinkedList(LinkedList& l) ;
     // Destructor to clean up memory
     ~LinkedList() ;
     // Method to insert a node by position
@@ -23,4 +25,6 @@ public:
     void deleteByValue(int value);
     // Method to delete a node by position
     void deleteByPosition(int pos);
+    // reverse linkedlist
+    void reverse();
 };

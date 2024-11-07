@@ -5,6 +5,19 @@
 LinkedList::LinkedList() : head(nullptr) {}
 
 
+LinkedList::LinkedList(LinkedList& l) 
+{
+    Node* current = l.head;
+    int i =0;
+    while (current != nullptr)
+    {
+        insert(current->data,i);
+        current=current->next;
+        i++;
+    }
+}
+
+
 LinkedList::~LinkedList() 
 {
     Node* current = head;
@@ -147,3 +160,16 @@ void LinkedList::deleteByPosition(int pos)
 }   
 
 
+void LinkedList::reverse()
+{
+    Node* prev=nullptr;
+    Node* curr=head;
+    while(curr!=nullptr)
+    {
+        Node* temp=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=temp;
+    }
+    head = prev;
+}

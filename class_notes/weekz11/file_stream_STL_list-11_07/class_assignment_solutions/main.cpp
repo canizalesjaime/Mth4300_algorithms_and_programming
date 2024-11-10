@@ -6,6 +6,7 @@ int main()
     LinkedList list;
 
     // Insert elements
+    ///////////////////////////////////////////////////////////////////////////
     list.insert(100,3);
     std::cout << "Linked List: ";
     list.display();  // Output: nullptr
@@ -47,6 +48,7 @@ int main()
 
 
     // Delete an element
+    ///////////////////////////////////////////////////////////////////////////
     list.deleteByPosition(4);
     std::cout << "After deleting position 4: ";
     list.display();  // Output: 40 -> 20 -> 70 -> 40 -> 17 -> 10 -> 80 -> nullptr
@@ -56,15 +58,15 @@ int main()
     list.display();  // Output: 20 -> 70 -> 40 -> 17 -> 10 -> 80 -> nullptr
 
     list.deleteByPosition(5);
-    std::cout << "After deleting position 0: ";
+    std::cout << "After deleting position 5: ";
     list.display();  // Output: 20 -> 70 -> 40 -> 17 -> 10 -> nullptr
-    list.reverse();
-    std::cout << "Reverse List: ";
-    list.display();
 
-    // LinkedList list2(list);  
-    // std::cout << "Forward List: ";
-    // list2.display();
+    // Copy and reverse 
+    ///////////////////////////////////////////////////////////////////////////
+    LinkedList list2(list);  
+    list2.reverse();
+    std::cout << "Reverse List2: ";
+    list2.display(); // Output: 10 -> 17 -> 40 -> 70 -> 20 -> nullptr
    
     return 0;
 }

@@ -14,7 +14,7 @@ public:
     // Constructor
     LinkedList();
     // Copy Constructor
-    LinkedList(LinkedList& l) ;
+    LinkedList(const LinkedList& l) ;
     // Destructor to clean up memory
     ~LinkedList() ;
     // Method to insert a node by position

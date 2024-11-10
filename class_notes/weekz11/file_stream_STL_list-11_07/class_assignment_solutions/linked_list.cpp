@@ -5,10 +5,10 @@
 LinkedList::LinkedList() : head(nullptr) {}
 
 
-LinkedList::LinkedList(LinkedList& l) 
+LinkedList::LinkedList(const LinkedList& l) : head(nullptr) 
 {
     Node* current = l.head;
-    int i =0;
+    int i=0;
     while (current != nullptr)
     {
         insert(current->data,i);
@@ -38,7 +38,7 @@ void LinkedList::insert(int value, int pos)
 
     // empty list case
     if(head==nullptr && pos==0)
-        head=newNode;
+        head=newNode;   
 
     //insert at front of list
     else if(pos==0)
@@ -51,7 +51,7 @@ void LinkedList::insert(int value, int pos)
     else
     {
         Node* temp = head;
-        while(temp !=nullptr && (pos-1)>0)
+        while(temp!=nullptr && (pos-1)>0)
         {
             temp=temp->next;
             pos--;
@@ -60,7 +60,7 @@ void LinkedList::insert(int value, int pos)
         if (temp!=nullptr && pos == 1) 
         {
             newNode->next=temp->next;
-            temp->next = newNode; 
+            temp->next = newNode;
         }
 
         else

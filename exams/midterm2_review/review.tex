@@ -23,39 +23,118 @@
           of the current object.
     \item The size of an std::vector is fixed once it is created and cannot change.
     \item std::list in C++ allows random access to its elements, just like std::vector.
-    \item You can overload the arrow (->) operator in a class, and it is commonly
+    \item You can overload the arrow (-$>$) operator in a class, and it is commonly
           used when a class contains or behaves like a pointer.
     \item In a singly linked list, each node has a pointer to the previous node as well as the next node.
     \item The time complexity of the selection sort algorithm is O(n log n) in the worst case.
     \item The fstream class in C++ allows for both input and output operations on files.
-    \item Overloaded operators must have at least one operand that is of user-defined type.
-    \item In C++, using header guards (or #pragma once) is essential in 
-          multifile projects to prevent multiple inclusions of the same header file.
+    \item Overloaded operators must have at least one operand that is of user-defined type(a class).
+    \item (*ptr).method() is the same as ptr-$>$method()  
 \end{enumerate}
 \newpage
 
 
 \section{SHORT ANSWER}
 \begin{enumerate}
-    \item Name 
+    \item How do you declare a member function that guarantees it will not modify the object it belongs to?
+    \item What happens to the elements of a vector when it resizes after exceeding its current capacity?
+    \item What is an advantage of using std::list over std::vector?
+    \item In stl the list stl data structure has a method named push\_front() 
+          that adds an element to the front of the list. What is the time complexity of this method?
+    \item What operator do you have to overload as friend function(typically)?
+    \item What class in fstream is used to only open files?
+    \item When is a destructor called?
+    \item Given the files \texttt{main.cpp myclass1.cpp myclass1.h} how would you compile these in a terminal
+    \item Write any function signature that uses default parameters(arguments).
+    \item How does the selection sort algorithm determine which element to swap at each step?  
 \end{enumerate}
 \newpage 
 
 
 \section{CODING}
 \begin{enumerate}
-    \item \includegraphics[width=5cm]{question2.png}
-    
-\end{enumerate} 
+    \item Write the code for the method(adds a node to the end of a linked list. Return true if successful otherwise false. Do not use stl): 
+    \begin{verbatim}
+        bool LinkedList::push_back(int val)
+        {
+            ...
+        }
+    \end{verbatim}\newpage
+    \item The code below has more than 5 errors. Find at least 5 for full credit!\\
+    \textbf{rectangle.h:}
+    \begin{verbatim}
+#ifndef RECTANGLE_H
+#define RECTANGLE_H
+
+class Rectangle {
+public:
+    Rectangle(double width, double height);  // Constructor                 
+    double getPerimeter() const;             // Member function to get perimeter
+    void setHeight(double height) const;     // Sets height
+    void getHeight();                        // Gets height
+
+
+private:
+    double width;                            // Member variables
+    double height;
+};
+
+#endif // RECTANGLE_H
+    \end{verbatim}
+    \textbf{rectangle.cpp:}
+    \begin{verbatim}
+#include<iostream>
+#include "rectangle.h"
+
+// Constructor definition
+Rectangle::Rectangle(double width, double height) : width(width), height(height) {}
+
+// Function to calculate the area of the rectangle
+double Rectangle::getArea() const 
+{
+    return width * height;
+}
+
+// Sets height
+double Rectangle::getPerimeter() const
+{
+    return 2 * (width + height);
+}
+
+// Function to calculate the perimeter of the rectangle
+double Rectangle::setHeight(double h) const
+{
+    height=h;
+}
+
+// Gets height
+void getHeight()
+{
+    return height;
+}                      
+\end{verbatim} 
 \newpage
+\textbf{main.cpp:}
+\begin{verbatim}
+#include <iostream>
+
+int main() 
+{
+    Rectangle rect(10.0, 5.0);  // Create a Rectangle object with width 5.0 and height 3.0
+    std::cout << "Area: " << rect.getArea() << std::endl;
+    std::cout << "Perimeter: " << rect.getPerimeter() << std::endl;
+    std::cout <<rect<< std::endl;
+    return 0;
+}
+\end{verbatim}
+\end{enumerate}
+\newpage
+
 
 \section{SOLUTIONS}
 \subsection{TRUE OR FALSE}
 \begin{enumerate}
     \item true
     \item true
-    \item \href{run:./coding_question4.cpp}{coding\_question4.cpp}
 \end{enumerate}
-
-
 \end{document}

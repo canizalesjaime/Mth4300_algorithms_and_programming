@@ -4,7 +4,7 @@
 
 class Rectangle {
 public:
-    Rectangle(double width, double height);  // Constructor
+    Rectangle(double w, double h);  // Constructor
     double getArea() const;                  // Member function to get area
     double getPerimeter() const;             // Member function to get perimeter
 

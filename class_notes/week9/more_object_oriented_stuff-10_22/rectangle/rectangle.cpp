@@ -4,7 +4,7 @@
 
 
 // Constructor definition
-Rectangle::Rectangle(double width, double height) : width(width), height(height) {}
+Rectangle::Rectangle(double w, double h) : width(w), height(h) {}
 
 // Function to calculate the area of the rectangle
 double Rectangle::getArea() const 

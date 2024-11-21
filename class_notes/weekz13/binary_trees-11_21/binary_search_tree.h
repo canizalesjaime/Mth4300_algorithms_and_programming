@@ -26,7 +26,7 @@ class BinarySearchTree
         void insert(int value);
         void inOrder(Node* start);
         Node* search(int val);
-        bool deleteNode(Node* start, int val);
+        Node* deleteNode(Node* start, int val);
         Node* findMin(Node* start);
 
     private:

@@ -89,34 +89,38 @@ Node* BinarySearchTree::search(int val)
 }
 
 
-bool BinarySearchTree::deleteNode(Node* start, int val)
+Node* BinarySearchTree::deleteNode(Node* start, int val)
 {
-    Node* curr=search(val);
+    if(!start) return nullptr;
 
-    if(curr)
+    else if(val < start->data) start->left=deleteNode(start->left,val);
+
+    else if(val > start->data) start->right=deleteNode(start->right,val); 
+    
+    else
     {
         //two children
-        if(curr->left && curr->right)
+        if(start->left && start->right)
         {
-            Node* temp_ptr = findMin( curr->right );
-            curr->data = temp_ptr->data;
-            deleteNode( curr->right, curr->data );
+            Node* temp_ptr = findMin( start->right );
+            start->data = temp_ptr->data;
+            deleteNode( start->right, start->data );
         }
 
 
        else //at most one children
        {
-            Node* old_node =curr;
-            if (curr->left) curr=curr->left;
+            Node* old_node =start;
+            if (start->left) start=start->left;
 
-            else curr=curr->right;
+            else start=start->right;
 
             delete old_node;
        } 
-       return true;
+
     }
 
-    else return false;//no node to delete
+    return start;//no node to delete
 }
 
 

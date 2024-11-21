@@ -15,7 +15,7 @@ int main()
 
     bst.inOrder(bst.getRoot());
     std::cout<<bst.deleteNode(bst.getRoot(),70);
-    bst.inOrder(bst.getRoot());
+    //bst.inOrder(bst.getRoot());
     // bst.~BinarySearchTree();
     //bst.inOrder(bst.getRoot());
 

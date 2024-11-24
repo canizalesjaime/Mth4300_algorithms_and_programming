@@ -2,7 +2,6 @@
 
 ## table of contents
 1. Binary Trees
-2. Class Assignments
 
 
 ## Binary Trees
@@ -51,28 +50,7 @@ struct Node {
 ```
 
 
-### Basic Binary Tree Operations:
-#### Insertion:
-The insertion operation places a new node at the correct position in the tree. Here's an example of inserting a node into a binary search tree (BST), where the left child contains a smaller value and the right child contains a larger value.
-
-```cpp
-// Function to insert a new node in the binary search tree (BST)
-Node* insert(Node* root, int value) {
-    if (root == nullptr) {
-        return new Node(value);  // If the tree is empty, create a new node
-    }
-    
-    if (value < root->data) {
-        root->left = insert(root->left, value);  // Insert in the left subtree
-    } else {
-        root->right = insert(root->right, value); // Insert in the right subtree
-    }
-    
-    return root;
-}
-```
-
-#### Traversal:
+### Traversal:
 Traversal is the process of visiting all nodes in the tree. There are three primary methods:
 
 1. In-order Traversal (Left, Root, Right):
@@ -113,68 +91,3 @@ void postOrder(Node* root) {
     }
 }
 ```
-4. Searching:
-Searching involves finding whether a specific value exists in the tree.
-
-```cpp
-// Function to search for a value in a BST
-bool search(Node* root, int key) {
-    if (root == nullptr) {
-        return false;  // Value not found
-    }
-    
-    if (root->data == key) {
-        return true;   // Value found
-    }
-    
-    // Recur down the tree based on the value
-    if (key < root->data) {
-        return search(root->left, key);
-    } else {
-        return search(root->right, key);
-    }
-}
-```
-
-#### Example Usage:
-```cpp
-int main() {
-    Node* root = nullptr;
-
-    // Insert nodes into the binary tree
-    root = insert(root, 50);
-    insert(root, 30);
-    insert(root, 70);
-    insert(root, 20);
-    insert(root, 40);
-    insert(root, 60);
-    insert(root, 80);
-
-    // Display the in-order traversal
-    cout << "In-order traversal: ";
-    inOrder(root);
-    cout << endl;
-
-    // Search for a value in the tree
-    int key = 40;
-    if (search(root, key)) {
-        cout << "Value " << key << " found in the tree." << endl;
-    } else {
-        cout << "Value " << key << " not found in the tree." << endl;
-    }
-
-    return 0;
-}
-```
-
-### Complexity:
-* Time Complexity:
-  * Insertion, Deletion, Search: O(log n) for balanced trees (O(n) in the worst case for unbalanced trees).
-* Space Complexity:
-  * O(n), where n is the number of nodes in the tree.
-
-### Conclusion:
-Binary trees are a powerful data structure that can be used for efficient searching, sorting, and hierarchical data organization. Implementing binary trees in C++ is straightforward with the use of pointers and recursive functions for operations like insertion, traversal, and search.
-
-## Class Assignments
-1. Add a function to the BST data structure to return the height of the BST. 

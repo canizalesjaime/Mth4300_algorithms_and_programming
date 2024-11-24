@@ -5,7 +5,11 @@
 BinarySearchTree::BinarySearchTree():root(nullptr){}
 
 
-BinarySearchTree::~BinarySearchTree(){destroy(root);}
+BinarySearchTree::~BinarySearchTree()
+{
+    destroy(root);
+    root=nullptr;
+}
 
 
 void BinarySearchTree::destroy(Node* curr_del)
@@ -26,40 +30,21 @@ Node* BinarySearchTree::getRoot()
 }
 
 
-void BinarySearchTree::insert(int value)
+Node* BinarySearchTree::insert(Node* start, int val)
 {
-    if (!root) 
+     if (!root) 
     {
-        root= new Node(value);
-        return;
+        root= new Node(val);
+        return root;
     }
-    
-    Node* curr= root;
-    
-    while(curr)
-    {
-        if(value < curr->data)
-        {
-            if(!curr->left)
-            {
-                curr->left=new Node(value);
-                return;
-            }
-            else curr=curr->left;
-        }
 
-        else if (value > curr->data)
-        {
-            if(!curr->right)
-            {
-                curr->right=new Node(value);
-                return;
-            }
-            else curr=curr->right;
-        }
+    if (!start) return new Node(val);  // found position to insert
 
-        else return; //dont insert duplicates
-    }
+    else if (val < start->data) start->left = insert(start->left, val);  
+
+    else if (val > start->data) start->right = insert(start->right, val); 
+    
+    return start;
 }
 
 
@@ -99,28 +84,24 @@ Node* BinarySearchTree::deleteNode(Node* start, int val)
     
     else
     {
-        //two children
-        if(start->left && start->right)
+        if(start->left && start->right)//two children
         {
-            Node* temp_ptr = findMin( start->right );
-            start->data = temp_ptr->data;
-            deleteNode( start->right, start->data );
+            Node* min_node = findMin( start->right );
+            start->data = min_node->data;
+            start->right = deleteNode( start->right, start->data );
         }
 
 
        else //at most one children
        {
-            Node* old_node =start;
-            if (start->left) start=start->left;
-
-            else start=start->right;
-
-            delete old_node;
+            Node* save_spot=start->left?start->left:start->right;
+            delete start;
+            return save_spot;
        } 
 
     }
 
-    return start;//no node to delete
+    return start;
 }
 
 

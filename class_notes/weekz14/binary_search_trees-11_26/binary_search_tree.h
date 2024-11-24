@@ -23,7 +23,7 @@ class BinarySearchTree
         ~BinarySearchTree();
 
         Node* getRoot();
-        void insert(int value);
+        Node* insert(Node* start, int val);
         void inOrder(Node* start);
         Node* search(int val);
         Node* deleteNode(Node* start, int val);

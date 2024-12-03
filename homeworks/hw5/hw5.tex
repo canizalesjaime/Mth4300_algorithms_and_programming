@@ -1,0 +1,91 @@
+\documentclass[a4paper]{article}
+
+\usepackage{fullpage} % Package to use full page
+\usepackage{parskip} % Package to tweak paragraph skipping
+\usepackage{tikz} % Package for drawing
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\title{MTH 4300: Algorithms, Computers, and Programming II}
+\author{HW \#5}
+\date{Due Date: December 17th, 2024}
+
+\begin{document}
+\maketitle
+
+
+\section*{Problem 1}
+Modify the  Binary Search Tree class from weekz14 (BST) to solve the following problems:\\
+
+\begin{enumerate}
+        \item A member function to find the kth smallest element using an in-order traversal.
+        \item A member function to check if the tree is a valid BST using recursion.
+\end{enumerate}
+
+\textbf{A main function to:}
+\begin{enumerate}
+        \item Insert a set of values into the BST.
+        \item Prompt the user to input k and display the kth smallest element.(handle invalid values of k gracefully (e.g., display a message if k is out of bounds).)
+        \item Check if the tree is a valid BST and display the result.(A valid BST satisfies the property that for every node, all values in its left subtree are smaller, and all values in its right subtree are greater.)
+\end{enumerate}
+
+
+\textbf{Constraints:}
+\begin{enumerate}
+        \item The validation function should operate in O(n) time complexity by performing a single traversal of the tree.
+        \item Assume 1 <= k <= n, where n is the number of nodes in the BST.
+\end{enumerate}
+
+
+\textbf{Example:}
+\begin{verbatim}
+Input:
+Values to insert into BST: 20, 10, 30, 5, 15, 25, 35
+Value of k: 3
+
+Output:
+In-order Traversal: 5 10 15 20 25 30 35
+The 3rd smallest element is: 15
+The tree is a valid BST.      
+\end{verbatim}
+
+
+
+\section*{Problem 2}
+To the binary search tree class from problem 1, add another method that prints out the post order of the nodes. 
+Do not use recursion for this question and instead use a stack.
+
+\section*{Problem 3}
+Write a program to use a stack to check if a given string is a palindrome. A palindrome is a string that reads the same forward and backward (ignoring spaces, punctuation, and case).
+The program should:
+\begin{enumerate}
+        \item Accept a string input from the user.
+        \item Use a stack to store the characters of the string.
+        \item Check if the string is a palindrome by: Ignoring spaces, punctuation, and case differences.
+        \item Comparing the original and reversed versions of the processed string.
+        \item Output whether the string is a palindrome.
+\end{enumerate}
+
+
+\section*{Problem 4}
+Write a C++ program that uses the STL queue to simulate a ticket counter system. The program should:
+
+\begin{enumerate}
+        \item Add customers to the queue with their name and ticket number.
+        \item Serve customers in the order they were added to the queue (FIFO).
+        \item Provide an option to:\begin{itemize}
+                \item Add a customer to the queue.
+                \item Serve the next customer and remove them from the queue.
+                \item Display the list of customers currently waiting in the queue.
+                \item Exit the program.
+        \end{itemize}
+\end{enumerate}
+Use appropriate functions to organize the program.
+
+\section*{Problem 5}
+Given two strings s and t, return true if the two strings are anagrams of each other, otherwise return false.
+
+An anagram is a string that contains the exact same characters as another string, but the order of the characters can be different.
+
+You must use stl unordered\_map to solve this problem in O(n) for both time and space complexity. 
+\end{document}

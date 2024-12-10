@@ -117,7 +117,7 @@ Node* BinarySearchTree::findMin(Node* start)
 
 int BinarySearchTree::getHeight(Node* start)
 {
-    if(!start) return 0;
+    if(!start || (!start->left && !start->right)) return 0;
 
     else return std::max(getHeight(start->left),getHeight(start->right))+1;
 }
